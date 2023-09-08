@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="zodiac"> zodiac</h1>
+    <input type="number" id="bulan" placeholder="bulan">
+    <input type="number" id="tanggal" placeholder="tanggal">
+    
+    <button onclick="Zodiak()">Zodiak</button>
+
+    <div>
+        <h1 id="namaku"> nama saya</h1>
+        <input type="text" id="nama" placeholder="nama anda">
+        <button onclick="namasaya()">namaku</button>
+        <div>
+            <h1 id="hasil">hasil perkalian</h1>
+            <input type="number" id="bil1" placeholder="bilangan 1">
+            <input type="number" id="bil2" placeholder="bilangan 2">
+            <button onclick="kali()">perkalian</button>
+            <button onclick="tambah()">pertambahan</button>
+        
+            
+   
+</body>
+    <script>
+    function hallo(){
+        document.getElementById('ganti').innerHTML="hallo javascript";
+      }
+     function namasaya(){
+        document.getElementById('namaku').innerHTML = document.getElementById('nama').value;
+     }
+     function kali(){
+            let a=document.getElementById('bil1').value;
+            let b=document.getElementById('bil2').value;
+            let hasil=a*b;
+            document.getElementById('hasil').innerHTML=hasil;
+     }
+     function tambah(){
+            let c=parseInt(document.getElementById('bil1').value);
+            let d=parseInt(document.getElementById('bil2').value);
+            let hasil=c+d;
+            document.getElementById('hasil').innerHTML=hasil;
+     }
+     function Zodiak(){
+            let tanggal=document.getElementById('tanggal').value;
+            let bulan=document.getElementById('bulan').value;
+            let Zodiak="kurang tau";
+            if(bulan==1){
+                if(tanggal>0 && tanggal<31){
+                    Zodiak="Leo";
+                }
+                if(tanggal>0 && tanggal<31){
+                    Zodiak="Pisces";
+                }
+                if(tanggal>0 && tanggal<31){
+                    Zodiak="Aries";
+                }
+            }
+            document.getElementById('Zodiak').innerHTML=Zodiak;
+        }
+
+        
+
+    </script>
+</html>
